@@ -10,6 +10,8 @@ import ibf2022.ssf.day12workshop.model.Item;
 @Repository
 public class ItemRepo {
 
+    //adds items into repo -> go to services after this
+
     private List<Item> itemList;
     
     public List<Item> getCartItems() {

@@ -14,6 +14,8 @@ public class ItemService {
     @Autowired  //no need to instantiate object with autowiring, this will be done
     ItemRepo itmRepo;
 
+
+    //fucntion to retriever the repo -> go to controller after this
     public List<Item> retrieveItemList() {
         return itmRepo.getCartItems();
     }
