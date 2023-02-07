@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import ibf2022.ssf.day12workshop.model.Country;
@@ -34,7 +35,8 @@ public class CountryController {
         return ctySvc.createCountry(cty);
     }
 
-    @GetMapping("/list")
+    //@RequestMapping(path = "/list", method = RequestMethod.GET) --> another method to obtain the same result as GetMapping below
+    @GetMapping("list")
     public String displayCountryList(Model model) {
         List<Country> ctyList = ctySvc.getAllCountries();
         model.addAttribute("countryList", ctyList);
